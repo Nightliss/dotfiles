@@ -1,0 +1,24 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles-user
+dotfiles:
+  f_config.fish:
+    src: config/fish/config.fish
+    dst: ~/.config/fish/config.fish
+  f_fish_plugins:
+    src: config/fish/fish_plugins
+    dst: ~/.config/fish/fish_plugins
+  d_kitty:
+    src: config/kitty
+    dst: ~/.config/kitty
+  d_micro:
+    src: config/micro
+    dst: ~/.config/micro
+profiles:
+  mac.local:
+    dotfiles:
+    - f_config.fish
+    - f_fish_plugins
+    - d_kitty
+    - d_micro
