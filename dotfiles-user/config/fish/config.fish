@@ -1,4 +1,6 @@
+# global
 set fish_greeting                                  # Supresses fish's intro message
+set -gx EDITOR code
 
 if test "$(uname)" = Darwin
     # global
@@ -16,6 +18,10 @@ if test "$(uname)" = Darwin
 else
     # global
     set TERM "xterm-kitty"                             # Sets the terminal type
+
+    # dotdrop
+    alias dotdropu='/home/$USER/dotfiles/dotdrop.sh --cfg=/home/$USER/dotfiles/config-user.yaml'
+    alias dotdropuu='dotdropu update -f'
 end
 
 # bat

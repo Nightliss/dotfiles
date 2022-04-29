@@ -22,3 +22,9 @@ profiles:
     - f_fish_plugins
     - d_kitty
     - d_micro
+  nh5zen:
+    dotfiles:
+    - f_config.fish
+    - f_fish_plugins
+    - d_kitty
+    - d_micro
