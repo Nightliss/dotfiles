@@ -15,6 +15,9 @@ dotfiles:
   d_micro:
     src: config/micro
     dst: ~/.config/micro
+  d_conky:
+    src: config/conky
+    dst: ~/.config/conky
 profiles:
   mac.local:
     dotfiles:
@@ -28,3 +31,4 @@ profiles:
     - f_fish_plugins
     - d_kitty
     - d_micro
+    - d_conky
