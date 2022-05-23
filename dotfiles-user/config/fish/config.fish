@@ -1,11 +1,12 @@
 # global
-set fish_greeting                                  # Supresses fish's intro message
+set fish_greeting # Supresses fish's intro message
 set -gx EDITOR code
 
 if test "$(uname)" = Darwin
     # global
     set -U fish_user_paths /opt/homebrew/opt/rclone-mac/libexec/rclone $fish_user_paths
     set -U fish_user_paths /opt/homebrew/opt/mysql-client/bin/ $fish_user_paths
+    set -U fish_user_paths (go env GOPATH)/bin $fish_user_paths
 
     # dotdrop
     alias dotdropu='/Users/$USER/dotfiles/dotdrop.sh --cfg=/Users/$USER/dotfiles/config-user.yaml'
@@ -17,7 +18,7 @@ if test "$(uname)" = Darwin
     end
 else
     # global
-    set TERM "xterm-kitty"                             # Sets the terminal type
+    set TERM xterm-kitty # Sets the terminal type
 
     # dotdrop
     alias dotdropu='/home/$USER/dotfiles/dotdrop.sh --cfg=/home/$USER/dotfiles/config-user.yaml'
@@ -29,8 +30,8 @@ alias cat='bat'
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
+alias la='exa -a --color=always --group-directories-first' # all files and dirs
+alias ll='exa -l --color=always --group-directories-first' # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
