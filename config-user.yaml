@@ -21,6 +21,12 @@ dotfiles:
   f_vivaldi-stable.conf:
     src: config/vivaldi-stable.conf
     dst: ~/.config/vivaldi-stable.conf
+  f_ssh-agent.service:
+    src: config/systemd/user/ssh-agent.service
+    dst: ~/.config/systemd/user/ssh-agent.service
+  f_ssh-add.desktop:
+    src: config/autostart/ssh-add.desktop
+    dst: ~/.config/autostart/ssh-add.desktop
 profiles:
   mac.local:
     dotfiles:
@@ -36,3 +42,5 @@ profiles:
     - d_micro
     - d_conky
     - f_vivaldi-stable.conf
+    - f_ssh-agent.service
+    - f_ssh-add.desktop
