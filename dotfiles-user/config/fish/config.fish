@@ -27,6 +27,9 @@ else
     # dotdrop
     alias dotdropu='/home/$USER/dotfiles/dotdrop.sh --cfg=/home/$USER/dotfiles/config-user.yaml'
     alias dotdropuu='dotdropu update -f'
+
+    alias dotdropr='sudo /home/$USER/dotfiles/dotdrop.sh --cfg=/home/$USER/dotfiles/config-root.yaml'
+    alias dotdropru='sudo dotdropr update -f'
 end
 
 # bat

@@ -1,0 +1,12 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles-root
+dotfiles:
+  f_disable-turbo-boost.service:
+    src: etc/systemd/system/disable-turbo-boost.service
+    dst: /etc/systemd/system/disable-turbo-boost.service
+profiles:
+  nh5zen:
+    dotfiles:
+    - f_disable-turbo-boost.service
