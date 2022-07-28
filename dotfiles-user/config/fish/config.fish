@@ -23,6 +23,9 @@ else
     # dotdrop
     alias dotdropu='/home/$USER/dotfiles/dotdrop.sh --cfg=/home/$USER/dotfiles/config-user.yaml'
     alias dotdropuu='dotdropu update -f'
+
+    set -gx SSH_ASKPASS /usr/bin/ksshaskpass
+    set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR"/ssh-agent.socket
 end
 
 # bat
