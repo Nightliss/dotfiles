@@ -18,6 +18,9 @@ dotfiles:
   d_conky:
     src: config/conky
     dst: ~/.config/conky
+  f_vivaldi-stable.conf:
+    src: config/vivaldi-stable.conf
+    dst: ~/.config/vivaldi-stable.conf
 profiles:
   mac.local:
     dotfiles:
@@ -32,3 +35,4 @@ profiles:
     - d_kitty
     - d_micro
     - d_conky
+    - f_vivaldi-stable.conf
