@@ -6,7 +6,11 @@ dotfiles:
   f_disable-turbo-boost.service:
     src: etc/systemd/system/disable-turbo-boost.service
     dst: /etc/systemd/system/disable-turbo-boost.service
+  f_zram-generator.conf:
+    src: usr/lib/systemd/zram-generator.conf
+    dst: /usr/lib/systemd/zram-generator.conf
 profiles:
   nh5zen:
     dotfiles:
     - f_disable-turbo-boost.service
+    - f_zram-generator.conf
