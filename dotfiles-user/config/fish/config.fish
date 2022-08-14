@@ -4,9 +4,12 @@ set -gx EDITOR code
 
 if test "$(uname)" = Darwin
     # global
+    set -U fish_user_paths /opt/homebrew/bin $fish_user_paths
     set -U fish_user_paths /opt/homebrew/opt/rclone-mac/libexec/rclone $fish_user_paths
     set -U fish_user_paths /opt/homebrew/opt/mysql-client/bin/ $fish_user_paths
     set -U fish_user_paths (go env GOPATH)/bin $fish_user_paths
+
+    set -g fish_complete_path $fish_complete_path /opt/homebrew/share/fish/vendor_completions.d
 
     # dotdrop
     alias dotdropu='/Users/$USER/dotfiles/dotdrop.sh --cfg=/Users/$USER/dotfiles/config-user.yaml'
